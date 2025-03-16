@@ -16,11 +16,9 @@ PROCESSOR 10F320
 
 #include <xc.inc>
 
-; Reset vector
 PSECT resetVec,class=CODE
 resetVec:
     goto    main
-
     
 PSECT code
 main:
