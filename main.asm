@@ -40,13 +40,13 @@ main:
     BCF LATA2  ; Set RA2 low
     
 loop:
-    btfss TMR0IF
-    goto loop
-    bcf TMR0IF
+    BTFSS TMR0IF
+    GOTO loop
+    BCF TMR0IF
     
-    movlw LATA_LATA2_MASK ; toggle RA2
-    xorwf LATA, F
+    MOVLW LATA_LATA2_MASK ; toggle RA2
+    XORWF LATA, F
     
-    goto loop
+    GOTO loop
     
 END resetVec
